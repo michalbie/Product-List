@@ -20,7 +20,7 @@ const List = (): JSX.Element => {
 
 	for (const key of Object.keys(data)) {
 		const value = data[key];
-		if (filterOption != null && value["prod_status"].includes(filterOption)) {
+		if (filterOption != "null" && value["prod_status"].includes(filterOption)) {
 			elements.push(<ListElement key={key} elementData={value}></ListElement>);
 		} else if (filterOption == "null") {
 			elements.push(<ListElement key={key} elementData={value}></ListElement>);
