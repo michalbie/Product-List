@@ -1,5 +1,4 @@
-import { resolve } from "node:path/win32";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 export default function downloadData(setData: React.Dispatch<any>) {
 	const data = fetch("products.json", {
@@ -14,6 +13,4 @@ export default function downloadData(setData: React.Dispatch<any>) {
 		.then(function (myJson) {
 			setData(myJson);
 		});
-	// const json = await data.json();
-	// return json;
 }

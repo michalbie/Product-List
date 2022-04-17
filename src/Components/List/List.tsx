@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import ListElement from "../ListElement/ListElement";
 import "./List.css";
-import downloadData from "../DataLoader";
+import downloadData from "../downloadData";
 
 const List = (): JSX.Element => {
 	const [data, setData] = useState(Object(null));

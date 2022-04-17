@@ -21,12 +21,12 @@ const ListElement = ({ elementData }: ListElementProps): JSX.Element => {
 			<div className="text-container">
 				<div className="title">{elementData["prod_name"]}</div>
 
-				{elementData["prod_prev_price"] && elementData["prod_prev_price"] != elementData["prod_price"] ? (
-					<s className="old-price">{elementData["prod_prev_price"]}</s>
-				) : null}
 				<div className="price-container">
 					<hr></hr>
 					<p className="price">{elementData["prod_price"]} zł</p>
+					{elementData["prod_prev_price"] && elementData["prod_prev_price"] != elementData["prod_price"] ? (
+						<s className="old-price">{elementData["prod_prev_price"]}</s>
+					) : null}
 				</div>
 			</div>
 		</div>
